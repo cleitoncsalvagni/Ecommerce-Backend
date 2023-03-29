@@ -1,24 +1,17 @@
-# README
+# E-commerce Games
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+Projeto de um e-commerce para a venda de chaves de jogos, contendo a Loja, Admin e Aplicativo.
 
-Things you may want to cover:
+## Aprendizados
 
-* Ruby version
+Testes, design patterns, arquitetura de banco de dados, integrações com meios de pagamentos e deploy utilizando os serviços Amazon.
 
-* System dependencies
+## Stack utilizada
 
-* Configuration
+**Front-end:** React, Typescript, Redux, Next JS
 
-* Database creation
+**Back-end:** Ruby on Rails, Devise Token Auth
 
-* Database initialization
+**Mobile:** React Native
 
-* How to run the test suite
-
-* Services (job queues, cache servers, search engines, etc.)
-
-* Deployment instructions
-
-* ...
+**Ferramentas:**  Redux Toolkit, Bootstrap 4, Axios
