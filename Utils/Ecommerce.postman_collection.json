@@ -1,0 +1,2927 @@
+{
+	"info": {
+		"name": "Ecommerce",
+		"_postman_id": "7cf59bbf-89fc-42f7-9f19-63fbf57ebf90",
+		"description": "",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "Admin",
+			"description": "",
+			"item": [
+				{
+					"name": "V1",
+					"description": "",
+					"item": [
+						{
+							"name": "Categories",
+							"description": "",
+							"item": [
+								{
+									"name": "/categories",
+									"request": {
+										"method": "GET",
+										"header": [
+											{
+												"key": "access-token",
+												"value": "JrBNe7t-bLNKzeM-vHBLLg"
+											},
+											{
+												"key": "client",
+												"value": "IJqthqNo4FxFVb2sh2Mk5A"
+											},
+											{
+												"key": "expiry",
+												"value": "1607196454"
+											},
+											{
+												"key": "token-type",
+												"value": "Bearer"
+											},
+											{
+												"key": "uid",
+												"value": "tommy@crooks.com"
+											}
+										],
+										"body": {},
+										"url": {
+											"raw": "http://localhost:3000/admin/v1/categories?search[name]=Firs&page=1&length=3&order[name]=desc",
+											"protocol": "http",
+											"host": [
+												"localhost"
+											],
+											"port": "3000",
+											"path": [
+												"admin",
+												"v1",
+												"categories"
+											],
+											"query": [
+												{
+													"key": "search[name]",
+													"value": "Firs",
+													"equals": true
+												},
+												{
+													"key": "page",
+													"value": "1",
+													"equals": true
+												},
+												{
+													"key": "length",
+													"value": "3",
+													"equals": true
+												},
+												{
+													"key": "order[name]",
+													"value": "desc",
+													"equals": true
+												}
+											]
+										},
+										"description": "Parâmetors opcionais:\n\n- searc[name] = \"Some exp\"\nEle deve conter uma expressão de busca por nome.\n\n- order[<field>] = <asc | desc>\nOrdenação conforme campo informado em <field>. Para o campo informado, deve ser informado 'asc' para ordenação crescente e 'desc' para decrescente\n\n- page = <page number>\nParâmetro de paginação para enviar o número da página que deseja acessar. Caso seja enviado um número menor que 1, será considerado página 1\n\n- length = <records count>\nQuantidade de registros cada página. Caso ele não seja informado, seŕa consideranda a quantidade padrão, que são 10 registros"
+									},
+									"response": []
+								},
+								{
+									"name": "/categories",
+									"request": {
+										"method": "POST",
+										"header": [
+											{
+												"key": "access-token",
+												"value": "GO4tpaaSGTgn71TS2elI9g"
+											},
+											{
+												"key": "client",
+												"value": "qp33foh2lYMF2EMCIZKNHw"
+											},
+											{
+												"key": "expiry",
+												"value": "1603635533"
+											},
+											{
+												"key": "token-type",
+												"value": "Bearer"
+											},
+											{
+												"key": "uid",
+												"value": "test@test.com"
+											},
+											{
+												"key": "Content-Type",
+												"value": "application/json"
+											}
+										],
+										"body": {
+											"mode": "raw",
+											"raw": "{\n\t\"category\": {\n\t\t\"name\": \"Category 01\"\n\t}\n}"
+										},
+										"url": {
+											"raw": "http://localhost:3000/admin/v1/categories",
+											"protocol": "http",
+											"host": [
+												"localhost"
+											],
+											"port": "3000",
+											"path": [
+												"admin",
+												"v1",
+												"categories"
+											]
+										},
+										"description": ""
+									},
+									"response": []
+								},
+								{
+									"name": "/categories/:id",
+									"request": {
+										"method": "GET",
+										"header": [
+											{
+												"key": "access-token",
+												"value": "ahHuAETn7esD2bhFl4D-aQ"
+											},
+											{
+												"key": "client",
+												"value": "88RDiEDwdjzFVmF0BD09MQ"
+											},
+											{
+												"key": "expiry",
+												"value": "1606685026"
+											},
+											{
+												"key": "token-type",
+												"value": "Bearer"
+											},
+											{
+												"key": "uid",
+												"value": "test@test.com"
+											}
+										],
+										"body": {},
+										"url": {
+											"raw": "http://localhost:3000/admin/v1/categories/1",
+											"protocol": "http",
+											"host": [
+												"localhost"
+											],
+											"port": "3000",
+											"path": [
+												"admin",
+												"v1",
+												"categories",
+												"1"
+											]
+										},
+										"description": "Parâmetors opcionais:\n\n- searc[name] = \"Some exp\"\nEle deve conter uma expressão de busca por nome.\n\n- order[<field>] = <asc | desc>\nOrdenação conforme campo informado em <field>. Para o campo informado, deve ser informado 'asc' para ordenação crescente e 'desc' para decrescente\n\n- page = <page number>\nParâmetro de paginação para enviar o número da página que deseja acessar. Caso seja enviado um número menor que 1, será considerado página 1\n\n- length = <records count>\nQuantidade de registros cada página. Caso ele não seja informado, seŕa consideranda a quantidade padrão, que são 10 registros"
+									},
+									"response": []
+								},
+								{
+									"name": "/categories/:id",
+									"request": {
+										"method": "PATCH",
+										"header": [
+											{
+												"key": "access-token",
+												"value": "6F6KQixDddZrAYnp5dyAiQ"
+											},
+											{
+												"key": "client",
+												"value": "EE2jDsQiiDgGdcFPgxG6pQ"
+											},
+											{
+												"key": "expiry",
+												"value": "1603559855"
+											},
+											{
+												"key": "token-type",
+												"value": "Bearer"
+											},
+											{
+												"key": "uid",
+												"value": "test@test.com"
+											},
+											{
+												"key": "Content-Type",
+												"value": "application/json"
+											}
+										],
+										"body": {
+											"mode": "raw",
+											"raw": "{\n\t\"category\": {\n\t\t\"name\": \"Category renamed\"\n\t}\n}"
+										},
+										"url": {
+											"raw": "http://localhost:3000/admin/v1/categories/1",
+											"protocol": "http",
+											"host": [
+												"localhost"
+											],
+											"port": "3000",
+											"path": [
+												"admin",
+												"v1",
+												"categories",
+												"1"
+											]
+										},
+										"description": ""
+									},
+									"response": []
+								},
+								{
+									"name": "/categories/:id",
+									"request": {
+										"method": "DELETE",
+										"header": [
+											{
+												"key": "access-token",
+												"value": "8Z7f6gInwRU7GF5yY1ud7Q"
+											},
+											{
+												"key": "client",
+												"value": "EE2jDsQiiDgGdcFPgxG6pQ"
+											},
+											{
+												"key": "expiry",
+												"value": "1603559855"
+											},
+											{
+												"key": "token-type",
+												"value": "Bearer"
+											},
+											{
+												"key": "uid",
+												"value": "test@test.com"
+											}
+										],
+										"body": {},
+										"url": {
+											"raw": "http://localhost:3000/admin/v1/categories/1",
+											"protocol": "http",
+											"host": [
+												"localhost"
+											],
+											"port": "3000",
+											"path": [
+												"admin",
+												"v1",
+												"categories",
+												"1"
+											]
+										},
+										"description": ""
+									},
+									"response": []
+								}
+							],
+							"_postman_isSubFolder": true
+						},
+						{
+							"name": "Licenses",
+							"description": "",
+							"item": [
+								{
+									"name": "/games/:game_id/licenses",
+									"request": {
+										"method": "GET",
+										"header": [
+											{
+												"key": "access-token",
+												"value": "PUZJktY2aVrtCUP3wlG7Bg"
+											},
+											{
+												"key": "client",
+												"value": "PvesG6_2x4_x02YX5S-jPw"
+											},
+											{
+												"key": "expiry",
+												"value": "1610675529"
+											},
+											{
+												"key": "token-type",
+												"value": "Bearer"
+											},
+											{
+												"key": "uid",
+												"value": "edith_goldner@mueller-schimmel.org"
+											}
+										],
+										"body": {},
+										"url": {
+											"raw": "http://localhost:3000/admin/v1/games/1/licenses?search[key]=abc&page=1&length=10&order[key]=desc",
+											"protocol": "http",
+											"host": [
+												"localhost"
+											],
+											"port": "3000",
+											"path": [
+												"admin",
+												"v1",
+												"games",
+												"1",
+												"licenses"
+											],
+											"query": [
+												{
+													"key": "search[key]",
+													"value": "abc",
+													"equals": true
+												},
+												{
+													"key": "page",
+													"value": "1",
+													"equals": true
+												},
+												{
+													"key": "length",
+													"value": "10",
+													"equals": true
+												},
+												{
+													"key": "order[key]",
+													"value": "desc",
+													"equals": true
+												}
+											]
+										},
+										"description": "Parâmetors opcionais:\n\n- searc[name] = \"Some exp\"\nEle deve conter uma expressão de busca por nome.\n\n- order[<field>] = <asc | desc>\nOrdenação conforme campo informado em <field>. Para o campo informado, deve ser informado 'asc' para ordenação crescente e 'desc' para decrescente\n\n- page = <page number>\nParâmetro de paginação para enviar o número da página que deseja acessar. Caso seja enviado um número menor que 1, será considerado página 1\n\n- length = <records count>\nQuantidade de registros cada página. Caso ele não seja informado, seŕa consideranda a quantidade padrão, que são 10 registros"
+									},
+									"response": []
+								},
+								{
+									"name": "/games/:game_id/licenses",
+									"request": {
+										"method": "POST",
+										"header": [
+											{
+												"key": "access-token",
+												"value": "t74iltrVgPNpVbvCjD-x4A"
+											},
+											{
+												"key": "client",
+												"value": "PvesG6_2x4_x02YX5S-jPw"
+											},
+											{
+												"key": "expiry",
+												"value": "1610675529"
+											},
+											{
+												"key": "token-type",
+												"value": "Bearer"
+											},
+											{
+												"key": "uid",
+												"value": "edith_goldner@mueller-schimmel.org"
+											},
+											{
+												"key": "Content-Type",
+												"value": "application/json"
+											}
+										],
+										"body": {
+											"mode": "raw",
+											"raw": "{\n\t\"license\": {\n\t\t\"key\": \"abc123teste\",\n\t\t\"platform\": \"origin\",\n\t\t\"status\": \"inactive\"\n\t}\n}"
+										},
+										"url": {
+											"raw": "http://localhost:3000/admin/v1/games/1/licenses",
+											"protocol": "http",
+											"host": [
+												"localhost"
+											],
+											"port": "3000",
+											"path": [
+												"admin",
+												"v1",
+												"games",
+												"1",
+												"licenses"
+											]
+										},
+										"description": ""
+									},
+									"response": []
+								},
+								{
+									"name": "/licenses/:id",
+									"request": {
+										"method": "GET",
+										"header": [
+											{
+												"key": "access-token",
+												"value": "Pn6BPWYlhPSKAQsxFnM8DQ"
+											},
+											{
+												"key": "client",
+												"value": "PvesG6_2x4_x02YX5S-jPw"
+											},
+											{
+												"key": "expiry",
+												"value": "1610675529"
+											},
+											{
+												"key": "token-type",
+												"value": "Bearer"
+											},
+											{
+												"key": "uid",
+												"value": "edith_goldner@mueller-schimmel.org"
+											}
+										],
+										"body": {},
+										"url": {
+											"raw": "http://localhost:3000/admin/v1/licenses/51",
+											"protocol": "http",
+											"host": [
+												"localhost"
+											],
+											"port": "3000",
+											"path": [
+												"admin",
+												"v1",
+												"licenses",
+												"51"
+											]
+										},
+										"description": "Parâmetors opcionais:\n\n- searc[name] = \"Some exp\"\nEle deve conter uma expressão de busca por nome.\n\n- order[<field>] = <asc | desc>\nOrdenação conforme campo informado em <field>. Para o campo informado, deve ser informado 'asc' para ordenação crescente e 'desc' para decrescente\n\n- page = <page number>\nParâmetro de paginação para enviar o número da página que deseja acessar. Caso seja enviado um número menor que 1, será considerado página 1\n\n- length = <records count>\nQuantidade de registros cada página. Caso ele não seja informado, seŕa consideranda a quantidade padrão, que são 10 registros"
+									},
+									"response": []
+								},
+								{
+									"name": "/licenses/:id",
+									"request": {
+										"method": "PATCH",
+										"header": [
+											{
+												"key": "access-token",
+												"value": "6c2Erpycy0sFiNmdAwsEHg"
+											},
+											{
+												"key": "client",
+												"value": "PvesG6_2x4_x02YX5S-jPw"
+											},
+											{
+												"key": "expiry",
+												"value": "1610675529"
+											},
+											{
+												"key": "token-type",
+												"value": "Bearer"
+											},
+											{
+												"key": "uid",
+												"value": "edith_goldner@mueller-schimmel.org"
+											},
+											{
+												"key": "Content-Type",
+												"value": "application/json"
+											}
+										],
+										"body": {
+											"mode": "raw",
+											"raw": "{\n\t\"license\": {\n\t\t\"key\": \"novakey_321\"\n\t}\n}"
+										},
+										"url": {
+											"raw": "http://localhost:3000/admin/v1/licenses/51",
+											"protocol": "http",
+											"host": [
+												"localhost"
+											],
+											"port": "3000",
+											"path": [
+												"admin",
+												"v1",
+												"licenses",
+												"51"
+											]
+										},
+										"description": ""
+									},
+									"response": []
+								},
+								{
+									"name": "/licenses/:id",
+									"request": {
+										"method": "DELETE",
+										"header": [
+											{
+												"key": "access-token",
+												"value": "6c2Erpycy0sFiNmdAwsEHg"
+											},
+											{
+												"key": "client",
+												"value": "PvesG6_2x4_x02YX5S-jPw"
+											},
+											{
+												"key": "expiry",
+												"value": "1610675529"
+											},
+											{
+												"key": "token-type",
+												"value": "Bearer"
+											},
+											{
+												"key": "uid",
+												"value": "edith_goldner@mueller-schimmel.org"
+											}
+										],
+										"body": {},
+										"url": {
+											"raw": "http://localhost:3000/admin/v1/licenses/51",
+											"protocol": "http",
+											"host": [
+												"localhost"
+											],
+											"port": "3000",
+											"path": [
+												"admin",
+												"v1",
+												"licenses",
+												"51"
+											]
+										},
+										"description": ""
+									},
+									"response": []
+								}
+							],
+							"event": [
+								{
+									"listen": "prerequest",
+									"script": {
+										"id": "02afb05f-d890-4a00-90c9-1a3819a63c8a",
+										"type": "text/javascript",
+										"exec": [
+											""
+										]
+									}
+								},
+								{
+									"listen": "test",
+									"script": {
+										"id": "cd856ceb-c6de-446a-a7ff-d18795bf36d4",
+										"type": "text/javascript",
+										"exec": [
+											""
+										]
+									}
+								}
+							],
+							"_postman_isSubFolder": true
+						},
+						{
+							"name": "Coupons",
+							"description": "",
+							"item": [
+								{
+									"name": "/coupons",
+									"request": {
+										"method": "GET",
+										"header": [
+											{
+												"key": "access-token",
+												"value": "gbKokz1COA-vC8ut5nURsA"
+											},
+											{
+												"key": "client",
+												"value": "IJqthqNo4FxFVb2sh2Mk5A"
+											},
+											{
+												"key": "expiry",
+												"value": "1607196454"
+											},
+											{
+												"key": "token-type",
+												"value": "Bearer"
+											},
+											{
+												"key": "uid",
+												"value": "tommy@crooks.com"
+											}
+										],
+										"body": {},
+										"url": {
+											"raw": "http://localhost:3000/admin/v1/coupons?search[name]=Cou&page=1&length=3&order[name]=desc",
+											"protocol": "http",
+											"host": [
+												"localhost"
+											],
+											"port": "3000",
+											"path": [
+												"admin",
+												"v1",
+												"coupons"
+											],
+											"query": [
+												{
+													"key": "search[name]",
+													"value": "Cou",
+													"equals": true
+												},
+												{
+													"key": "page",
+													"value": "1",
+													"equals": true
+												},
+												{
+													"key": "length",
+													"value": "3",
+													"equals": true
+												},
+												{
+													"key": "order[name]",
+													"value": "desc",
+													"equals": true
+												}
+											]
+										},
+										"description": "Parâmetors opcionais:\n\n- searc[name] = \"Some exp\"\nEle deve conter uma expressão de busca por nome.\n\n- order[<field>] = <asc | desc>\nOrdenação conforme campo informado em <field>. Para o campo informado, deve ser informado 'asc' para ordenação crescente e 'desc' para decrescente\n\n- page = <page number>\nParâmetro de paginação para enviar o número da página que deseja acessar. Caso seja enviado um número menor que 1, será considerado página 1\n\n- length = <records count>\nQuantidade de registros cada página. Caso ele não seja informado, seŕa consideranda a quantidade padrão, que são 10 registros"
+									},
+									"response": []
+								},
+								{
+									"name": "/coupons",
+									"request": {
+										"method": "POST",
+										"header": [
+											{
+												"key": "access-token",
+												"value": "QaAwkUKzi6lhJ-2T4Q_dOg"
+											},
+											{
+												"key": "client",
+												"value": "sH6YVSP6dV6uYKQkq3Q1qw"
+											},
+											{
+												"key": "expiry",
+												"value": "1603579058"
+											},
+											{
+												"key": "token-type",
+												"value": "Bearer"
+											},
+											{
+												"key": "uid",
+												"value": "test@test.com"
+											},
+											{
+												"key": "Content-Type",
+												"value": "application/json"
+											}
+										],
+										"body": {
+											"mode": "raw",
+											"raw": "{\n\t\"coupon\": {\n\t\t\"name\": \"Coupon 01\",\n\t\t\"code\": \"C01\",\n\t\t\"status\": \"inactive\",\n\t\t\"discount_value\": 30.54,\n\t\t\"max_use\": 40,\n\t\t\"due_date\": \"2021-04-01\"\n\t}\n}"
+										},
+										"url": {
+											"raw": "http://localhost:3000/admin/v1/coupons",
+											"protocol": "http",
+											"host": [
+												"localhost"
+											],
+											"port": "3000",
+											"path": [
+												"admin",
+												"v1",
+												"coupons"
+											]
+										},
+										"description": ""
+									},
+									"response": []
+								},
+								{
+									"name": "/coupons/:id",
+									"request": {
+										"method": "PATCH",
+										"header": [
+											{
+												"key": "access-token",
+												"value": "SkndxTwJrKGyOYs_UgCqQQ"
+											},
+											{
+												"key": "client",
+												"value": "4igPh57WDNVHKbgOY_7Bzw"
+											},
+											{
+												"key": "expiry",
+												"value": "1603576006"
+											},
+											{
+												"key": "token-type",
+												"value": "Bearer"
+											},
+											{
+												"key": "uid",
+												"value": "test@test.com"
+											},
+											{
+												"key": "Content-Type",
+												"value": "application/json"
+											}
+										],
+										"body": {
+											"mode": "raw",
+											"raw": "{\n\t\"coupon\": {\n\t\t\"name\": \"Coupon renamed\"\n\t}\n}"
+										},
+										"url": {
+											"raw": "http://localhost:3000/admin/v1/coupons/2",
+											"protocol": "http",
+											"host": [
+												"localhost"
+											],
+											"port": "3000",
+											"path": [
+												"admin",
+												"v1",
+												"coupons",
+												"2"
+											]
+										},
+										"description": ""
+									},
+									"response": []
+								},
+								{
+									"name": "/coupons/:id",
+									"request": {
+										"method": "DELETE",
+										"header": [
+											{
+												"key": "access-token",
+												"value": "6fUiT1OLOwUSOA9TvDiA7A"
+											},
+											{
+												"key": "client",
+												"value": "sH6YVSP6dV6uYKQkq3Q1qw"
+											},
+											{
+												"key": "expiry",
+												"value": "1603576006"
+											},
+											{
+												"key": "token-type",
+												"value": "Bearer"
+											},
+											{
+												"key": "uid",
+												"value": "test@test.com"
+											},
+											{
+												"key": "Content-Type",
+												"value": "application/json"
+											}
+										],
+										"body": {
+											"mode": "raw",
+											"raw": ""
+										},
+										"url": {
+											"raw": "http://localhost:3000/admin/v1/coupons/3",
+											"protocol": "http",
+											"host": [
+												"localhost"
+											],
+											"port": "3000",
+											"path": [
+												"admin",
+												"v1",
+												"coupons",
+												"3"
+											]
+										},
+										"description": ""
+									},
+									"response": []
+								}
+							],
+							"_postman_isSubFolder": true
+						},
+						{
+							"name": "Dashboard",
+							"description": "",
+							"item": [
+								{
+									"name": "/sales_ranges",
+									"request": {
+										"method": "GET",
+										"header": [
+											{
+												"key": "access-token",
+												"value": "09718XrA2rXsOxM8dtybwA"
+											},
+											{
+												"key": "client",
+												"value": "ZbB2UG6eN3FHJuTSyHiVvw"
+											},
+											{
+												"key": "expiry",
+												"value": "1622927941"
+											},
+											{
+												"key": "token-type",
+												"value": "Bearer"
+											},
+											{
+												"key": "uid",
+												"value": "lauri@braun-labadie.org"
+											}
+										],
+										"body": {},
+										"url": {
+											"raw": "http://localhost:3000/admin/v1/dashboard/sales_ranges?min_date=2021-04-01&max_date=2021-05-26",
+											"protocol": "http",
+											"host": [
+												"localhost"
+											],
+											"port": "3000",
+											"path": [
+												"admin",
+												"v1",
+												"dashboard",
+												"sales_ranges"
+											],
+											"query": [
+												{
+													"key": "min_date",
+													"value": "2021-04-01",
+													"equals": true
+												},
+												{
+													"key": "max_date",
+													"value": "2021-05-26",
+													"equals": true
+												}
+											]
+										},
+										"description": "Parâmetors opcionais:\n\n- searc[name] = \"Some exp\"\nEle deve conter uma expressão de busca por nome.\n\n- order[<field>] = <asc | desc>\nOrdenação conforme campo informado em <field>. Para o campo informado, deve ser informado 'asc' para ordenação crescente e 'desc' para decrescente\n\n- page = <page number>\nParâmetro de paginação para enviar o número da página que deseja acessar. Caso seja enviado um número menor que 1, será considerado página 1\n\n- length = <records count>\nQuantidade de registros cada página. Caso ele não seja informado, seŕa consideranda a quantidade padrão, que são 10 registros"
+									},
+									"response": []
+								},
+								{
+									"name": "/summaries",
+									"request": {
+										"method": "GET",
+										"header": [
+											{
+												"key": "access-token",
+												"value": "jgDUXznVh0W6KKf1ISl8oA"
+											},
+											{
+												"key": "client",
+												"value": "ZbB2UG6eN3FHJuTSyHiVvw"
+											},
+											{
+												"key": "expiry",
+												"value": "1622927941"
+											},
+											{
+												"key": "token-type",
+												"value": "Bearer"
+											},
+											{
+												"key": "uid",
+												"value": "lauri@braun-labadie.org"
+											}
+										],
+										"body": {},
+										"url": {
+											"raw": "http://localhost:3000/admin/v1/dashboard/summaries?min_date=2021-01-15&max_date=2021-05-25",
+											"protocol": "http",
+											"host": [
+												"localhost"
+											],
+											"port": "3000",
+											"path": [
+												"admin",
+												"v1",
+												"dashboard",
+												"summaries"
+											],
+											"query": [
+												{
+													"key": "min_date",
+													"value": "2021-01-15",
+													"equals": true
+												},
+												{
+													"key": "max_date",
+													"value": "2021-05-25",
+													"equals": true
+												}
+											]
+										},
+										"description": "Parâmetors opcionais:\n\n- searc[name] = \"Some exp\"\nEle deve conter uma expressão de busca por nome.\n\n- order[<field>] = <asc | desc>\nOrdenação conforme campo informado em <field>. Para o campo informado, deve ser informado 'asc' para ordenação crescente e 'desc' para decrescente\n\n- page = <page number>\nParâmetro de paginação para enviar o número da página que deseja acessar. Caso seja enviado um número menor que 1, será considerado página 1\n\n- length = <records count>\nQuantidade de registros cada página. Caso ele não seja informado, seŕa consideranda a quantidade padrão, que são 10 registros"
+									},
+									"response": []
+								},
+								{
+									"name": "/top_five_products",
+									"request": {
+										"method": "GET",
+										"header": [
+											{
+												"key": "access-token",
+												"value": "thV2IsU-7eoHD7918ywRPA"
+											},
+											{
+												"key": "client",
+												"value": "ZbB2UG6eN3FHJuTSyHiVvw"
+											},
+											{
+												"key": "expiry",
+												"value": "1622927941"
+											},
+											{
+												"key": "token-type",
+												"value": "Bearer"
+											},
+											{
+												"key": "uid",
+												"value": "lauri@braun-labadie.org"
+											}
+										],
+										"body": {},
+										"url": {
+											"raw": "http://localhost:3000/admin/v1/dashboard/top_five_products?min_date=2021-01-01&max_date=2021-05-26",
+											"protocol": "http",
+											"host": [
+												"localhost"
+											],
+											"port": "3000",
+											"path": [
+												"admin",
+												"v1",
+												"dashboard",
+												"top_five_products"
+											],
+											"query": [
+												{
+													"key": "min_date",
+													"value": "2021-01-01",
+													"equals": true
+												},
+												{
+													"key": "max_date",
+													"value": "2021-05-26",
+													"equals": true
+												}
+											]
+										},
+										"description": "Parâmetors opcionais:\n\n- searc[name] = \"Some exp\"\nEle deve conter uma expressão de busca por nome.\n\n- order[<field>] = <asc | desc>\nOrdenação conforme campo informado em <field>. Para o campo informado, deve ser informado 'asc' para ordenação crescente e 'desc' para decrescente\n\n- page = <page number>\nParâmetro de paginação para enviar o número da página que deseja acessar. Caso seja enviado um número menor que 1, será considerado página 1\n\n- length = <records count>\nQuantidade de registros cada página. Caso ele não seja informado, seŕa consideranda a quantidade padrão, que são 10 registros"
+									},
+									"response": []
+								}
+							],
+							"_postman_isSubFolder": true
+						},
+						{
+							"name": "Orders",
+							"description": "",
+							"item": [
+								{
+									"name": "/orders",
+									"request": {
+										"method": "GET",
+										"header": [
+											{
+												"key": "Content-Type",
+												"value": "application/json"
+											},
+											{
+												"key": "access-token",
+												"value": "OG_Bu170H0iRze74r1bsTA"
+											},
+											{
+												"key": "client",
+												"value": "cq6gkonqVRbk8sLFEY0Rmw"
+											},
+											{
+												"key": "expiry",
+												"value": "1622837111"
+											},
+											{
+												"key": "token-type",
+												"value": "Bearer"
+											},
+											{
+												"key": "uid",
+												"value": "lauri@braun-labadie.org"
+											}
+										],
+										"body": {},
+										"url": {
+											"raw": "http://localhost:3000/admin/v1/orders?order[created_at]=desc",
+											"protocol": "http",
+											"host": [
+												"localhost"
+											],
+											"port": "3000",
+											"path": [
+												"admin",
+												"v1",
+												"orders"
+											],
+											"query": [
+												{
+													"key": "order[created_at]",
+													"value": "desc",
+													"equals": true
+												}
+											]
+										},
+										"description": ""
+									},
+									"response": []
+								},
+								{
+									"name": "/orders/:id",
+									"request": {
+										"method": "GET",
+										"header": [
+											{
+												"key": "Content-Type",
+												"value": "application/json"
+											},
+											{
+												"key": "access-token",
+												"value": "OG_Bu170H0iRze74r1bsTA"
+											},
+											{
+												"key": "client",
+												"value": "cq6gkonqVRbk8sLFEY0Rmw"
+											},
+											{
+												"key": "expiry",
+												"value": "1622837111"
+											},
+											{
+												"key": "token-type",
+												"value": "Bearer"
+											},
+											{
+												"key": "uid",
+												"value": "lauri@braun-labadie.org"
+											}
+										],
+										"body": {},
+										"url": {
+											"raw": "http://localhost:3000/admin/v1/orders/30",
+											"protocol": "http",
+											"host": [
+												"localhost"
+											],
+											"port": "3000",
+											"path": [
+												"admin",
+												"v1",
+												"orders",
+												"30"
+											]
+										},
+										"description": ""
+									},
+									"response": []
+								}
+							],
+							"_postman_isSubFolder": true
+						},
+						{
+							"name": "Products",
+							"description": "",
+							"item": [
+								{
+									"name": "/products",
+									"request": {
+										"method": "GET",
+										"header": [
+											{
+												"key": "access-token",
+												"value": "b19ui4Wxqilr2XKsw4Crqg"
+											},
+											{
+												"key": "client",
+												"value": "WHHupkyGkp_FVoLskOQBnA"
+											},
+											{
+												"key": "expiry",
+												"value": "1611274815"
+											},
+											{
+												"key": "token-type",
+												"value": "Bearer"
+											},
+											{
+												"key": "uid",
+												"value": "mohamed@wolff.com"
+											}
+										],
+										"body": {},
+										"url": {
+											"raw": "http://localhost:3000/admin/v1/products?search[name]=Pok&page=1&length=4&order[name]=desc",
+											"protocol": "http",
+											"host": [
+												"localhost"
+											],
+											"port": "3000",
+											"path": [
+												"admin",
+												"v1",
+												"products"
+											],
+											"query": [
+												{
+													"key": "search[name]",
+													"value": "Pok",
+													"equals": true
+												},
+												{
+													"key": "page",
+													"value": "1",
+													"equals": true
+												},
+												{
+													"key": "length",
+													"value": "4",
+													"equals": true
+												},
+												{
+													"key": "order[name]",
+													"value": "desc",
+													"equals": true
+												}
+											]
+										},
+										"description": "Parâmetors opcionais:\n\n- searc[name] = \"Some exp\"\nEle deve conter uma expressão de busca por nome.\n\n- order[<field>] = <asc | desc>\nOrdenação conforme campo informado em <field>. Para o campo informado, deve ser informado 'asc' para ordenação crescente e 'desc' para decrescente\n\n- page = <page number>\nParâmetro de paginação para enviar o número da página que deseja acessar. Caso seja enviado um número menor que 1, será considerado página 1\n\n- length = <records count>\nQuantidade de registros cada página. Caso ele não seja informado, seŕa consideranda a quantidade padrão, que são 10 registros"
+									},
+									"response": []
+								},
+								{
+									"name": "/products",
+									"request": {
+										"method": "POST",
+										"header": [
+											{
+												"key": "access-token",
+												"value": "9EEaQS4fMgv-e6PoY-xD1A"
+											},
+											{
+												"key": "client",
+												"value": "f7hJzYald78bAwkNnZZqKg"
+											},
+											{
+												"key": "expiry",
+												"value": "1606696297"
+											},
+											{
+												"key": "token-type",
+												"value": "Bearer"
+											},
+											{
+												"key": "uid",
+												"value": "test@test.com"
+											},
+											{
+												"key": "Content-Type",
+												"value": "application/json"
+											}
+										],
+										"body": {
+											"mode": "formdata",
+											"formdata": [
+												{
+													"key": "product[name]",
+													"value": "Game 01",
+													"type": "text",
+													"description": ""
+												},
+												{
+													"key": "product[description]",
+													"value": "This is an awesome game!! Let's play it =)",
+													"type": "text",
+													"description": ""
+												},
+												{
+													"key": "product[price]",
+													"value": "115.25",
+													"type": "text",
+													"description": ""
+												},
+												{
+													"key": "product[productable]",
+													"value": "game",
+													"type": "text",
+													"description": ""
+												},
+												{
+													"key": "product[mode]",
+													"value": "pvp",
+													"type": "text",
+													"description": ""
+												},
+												{
+													"key": "product[release_date]",
+													"value": "2014-05-01",
+													"type": "text",
+													"description": ""
+												},
+												{
+													"key": "product[developer]",
+													"value": "My mom",
+													"type": "text",
+													"description": ""
+												},
+												{
+													"key": "product[status]",
+													"value": "available",
+													"type": "text",
+													"description": ""
+												},
+												{
+													"key": "product[system_requirement_id]",
+													"value": "1",
+													"type": "text",
+													"description": ""
+												},
+												{
+													"key": "product[image]",
+													"description": "",
+													"type": "file"
+												}
+											]
+										},
+										"url": {
+											"raw": "http://localhost:3000/admin/v1/products",
+											"protocol": "http",
+											"host": [
+												"localhost"
+											],
+											"port": "3000",
+											"path": [
+												"admin",
+												"v1",
+												"products"
+											]
+										},
+										"description": ""
+									},
+									"response": []
+								},
+								{
+									"name": "/products/:id",
+									"request": {
+										"method": "GET",
+										"header": [
+											{
+												"key": "access-token",
+												"value": "ttjls3gd3xsOj85UdM7pAA"
+											},
+											{
+												"key": "client",
+												"value": "f7hJzYald78bAwkNnZZqKg"
+											},
+											{
+												"key": "expiry",
+												"value": "1606696297"
+											},
+											{
+												"key": "token-type",
+												"value": "Bearer"
+											},
+											{
+												"key": "uid",
+												"value": "test@test.com"
+											}
+										],
+										"body": {},
+										"url": {
+											"raw": "http://localhost:3000/admin/v1/products/2",
+											"protocol": "http",
+											"host": [
+												"localhost"
+											],
+											"port": "3000",
+											"path": [
+												"admin",
+												"v1",
+												"products",
+												"2"
+											]
+										},
+										"description": "Parâmetors opcionais:\n\n- searc[name] = \"Some exp\"\nEle deve conter uma expressão de busca por nome.\n\n- order[<field>] = <asc | desc>\nOrdenação conforme campo informado em <field>. Para o campo informado, deve ser informado 'asc' para ordenação crescente e 'desc' para decrescente\n\n- page = <page number>\nParâmetro de paginação para enviar o número da página que deseja acessar. Caso seja enviado um número menor que 1, será considerado página 1\n\n- length = <records count>\nQuantidade de registros cada página. Caso ele não seja informado, seŕa consideranda a quantidade padrão, que são 10 registros"
+									},
+									"response": []
+								},
+								{
+									"name": "/products",
+									"request": {
+										"method": "PATCH",
+										"header": [
+											{
+												"key": "access-token",
+												"value": "EkwCt1rE1E4JsZJ2-ddvyw"
+											},
+											{
+												"key": "client",
+												"value": "6dPJiwehqWp2yjZpG3t8HA"
+											},
+											{
+												"key": "expiry",
+												"value": "1603572038"
+											},
+											{
+												"key": "token-type",
+												"value": "Bearer"
+											},
+											{
+												"key": "uid",
+												"value": "test@test.com"
+											},
+											{
+												"key": "Content-Type",
+												"value": "application/json"
+											}
+										],
+										"body": {
+											"mode": "raw",
+											"raw": "{\n\t\"product\": {\n\t\t\"name\": \"Game renamed\"\n\t}\n}"
+										},
+										"url": {
+											"raw": "http://localhost:3000/admin/v1/products/14",
+											"protocol": "http",
+											"host": [
+												"localhost"
+											],
+											"port": "3000",
+											"path": [
+												"admin",
+												"v1",
+												"products",
+												"14"
+											]
+										},
+										"description": ""
+									},
+									"response": []
+								},
+								{
+									"name": "/products/:id",
+									"request": {
+										"method": "DELETE",
+										"header": [
+											{
+												"key": "access-token",
+												"value": "sqv_VYpyLHx5UsL9wUyJFg"
+											},
+											{
+												"key": "client",
+												"value": "6dPJiwehqWp2yjZpG3t8HA"
+											},
+											{
+												"key": "expiry",
+												"value": "1603572038"
+											},
+											{
+												"key": "token-type",
+												"value": "Bearer"
+											},
+											{
+												"key": "uid",
+												"value": "test@test.com"
+											},
+											{
+												"key": "Content-Type",
+												"value": "application/json"
+											}
+										],
+										"body": {
+											"mode": "raw",
+											"raw": ""
+										},
+										"url": {
+											"raw": "http://localhost:3000/admin/v1/products/14",
+											"protocol": "http",
+											"host": [
+												"localhost"
+											],
+											"port": "3000",
+											"path": [
+												"admin",
+												"v1",
+												"products",
+												"14"
+											]
+										},
+										"description": ""
+									},
+									"response": []
+								}
+							],
+							"_postman_isSubFolder": true
+						},
+						{
+							"name": "System Requirements",
+							"description": "",
+							"item": [
+								{
+									"name": "/system_requirements",
+									"request": {
+										"method": "GET",
+										"header": [
+											{
+												"key": "access-token",
+												"value": "rVCjqS2JU7z1Ci1ga8NgcA"
+											},
+											{
+												"key": "client",
+												"value": "IJqthqNo4FxFVb2sh2Mk5A"
+											},
+											{
+												"key": "expiry",
+												"value": "1607196454"
+											},
+											{
+												"key": "token-type",
+												"value": "Bearer"
+											},
+											{
+												"key": "uid",
+												"value": "tommy@crooks.com"
+											}
+										],
+										"body": {},
+										"url": {
+											"raw": "http://localhost:3000/admin/v1/system_requirements?search[name]=Bas&page=1&length=3&order[name]=desc",
+											"protocol": "http",
+											"host": [
+												"localhost"
+											],
+											"port": "3000",
+											"path": [
+												"admin",
+												"v1",
+												"system_requirements"
+											],
+											"query": [
+												{
+													"key": "search[name]",
+													"value": "Bas",
+													"equals": true
+												},
+												{
+													"key": "page",
+													"value": "1",
+													"equals": true
+												},
+												{
+													"key": "length",
+													"value": "3",
+													"equals": true
+												},
+												{
+													"key": "order[name]",
+													"value": "desc",
+													"equals": true
+												}
+											]
+										},
+										"description": "Parâmetors opcionais:\n\n- searc[name] = \"Some exp\"\nEle deve conter uma expressão de busca por nome.\n\n- order[<field>] = <asc | desc>\nOrdenação conforme campo informado em <field>. Para o campo informado, deve ser informado 'asc' para ordenação crescente e 'desc' para decrescente\n\n- page = <page number>\nParâmetro de paginação para enviar o número da página que deseja acessar. Caso seja enviado um número menor que 1, será considerado página 1\n\n- length = <records count>\nQuantidade de registros cada página. Caso ele não seja informado, seŕa consideranda a quantidade padrão, que são 10 registros"
+									},
+									"response": []
+								},
+								{
+									"name": "/system_requirements",
+									"request": {
+										"method": "POST",
+										"header": [
+											{
+												"key": "access-token",
+												"value": "alvH-f19IaK212aIARncTw"
+											},
+											{
+												"key": "client",
+												"value": "qp33foh2lYMF2EMCIZKNHw"
+											},
+											{
+												"key": "expiry",
+												"value": "1603576006"
+											},
+											{
+												"key": "token-type",
+												"value": "Bearer"
+											},
+											{
+												"key": "uid",
+												"value": "test@test.com"
+											},
+											{
+												"key": "Content-Type",
+												"value": "application/json"
+											}
+										],
+										"body": {
+											"mode": "raw",
+											"raw": "{\n\t\"system_requirement\": {\n\t\t\"name\": \"System 01\",\n\t\t\"operational_system\": \"Windows 10\",\n\t\t\"storage\": \"3GB\",\n\t\t\"processor\": \"Inter I9 11ª geração\",\n\t\t\"memory\": \"8GB\",\n\t\t\"video_board\": \"GeForce 1450+\"\n\t}\n}"
+										},
+										"url": {
+											"raw": "http://localhost:3000/admin/v1/system_requirements",
+											"protocol": "http",
+											"host": [
+												"localhost"
+											],
+											"port": "3000",
+											"path": [
+												"admin",
+												"v1",
+												"system_requirements"
+											]
+										},
+										"description": ""
+									},
+									"response": []
+								},
+								{
+									"name": "/system_requirements/:id",
+									"request": {
+										"method": "PATCH",
+										"header": [
+											{
+												"key": "access-token",
+												"value": "B4RBnS-ceSQSnJeiVmqiJQ"
+											},
+											{
+												"key": "client",
+												"value": "_VBeQGeDCkk4DM27kFUNww"
+											},
+											{
+												"key": "expiry",
+												"value": "1603576006"
+											},
+											{
+												"key": "token-type",
+												"value": "Bearer"
+											},
+											{
+												"key": "uid",
+												"value": "test@test.com"
+											},
+											{
+												"key": "Content-Type",
+												"value": "application/json"
+											}
+										],
+										"body": {
+											"mode": "raw",
+											"raw": "{\n\t\"system_requirement\": {\n\t\t\"name\": \"New Requirement System\"\n\t}\n}"
+										},
+										"url": {
+											"raw": "http://localhost:3000/admin/v1/system_requirements/5",
+											"protocol": "http",
+											"host": [
+												"localhost"
+											],
+											"port": "3000",
+											"path": [
+												"admin",
+												"v1",
+												"system_requirements",
+												"5"
+											]
+										},
+										"description": ""
+									},
+									"response": []
+								},
+								{
+									"name": "/system_requirements/:id",
+									"request": {
+										"method": "DELETE",
+										"header": [
+											{
+												"key": "access-token",
+												"value": "vJyzhqCaXVfIv1hKiumZEg"
+											},
+											{
+												"key": "client",
+												"value": "_VBeQGeDCkk4DM27kFUNww"
+											},
+											{
+												"key": "expiry",
+												"value": "1603576006"
+											},
+											{
+												"key": "token-type",
+												"value": "Bearer"
+											},
+											{
+												"key": "uid",
+												"value": "test@test.com"
+											},
+											{
+												"key": "Content-Type",
+												"value": "application/json"
+											}
+										],
+										"body": {
+											"mode": "raw",
+											"raw": ""
+										},
+										"url": {
+											"raw": "http://localhost:3000/admin/v1/system_requirements/5",
+											"protocol": "http",
+											"host": [
+												"localhost"
+											],
+											"port": "3000",
+											"path": [
+												"admin",
+												"v1",
+												"system_requirements",
+												"5"
+											]
+										},
+										"description": ""
+									},
+									"response": []
+								}
+							],
+							"_postman_isSubFolder": true
+						},
+						{
+							"name": "Users",
+							"description": "",
+							"item": [
+								{
+									"name": "/users",
+									"request": {
+										"method": "GET",
+										"header": [
+											{
+												"key": "access-token",
+												"value": "rVgQKJz_ZQyIis46DTFceg"
+											},
+											{
+												"key": "client",
+												"value": "IJqthqNo4FxFVb2sh2Mk5A"
+											},
+											{
+												"key": "expiry",
+												"value": "1607196454"
+											},
+											{
+												"key": "token-type",
+												"value": "Bearer"
+											},
+											{
+												"key": "uid",
+												"value": "tommy@crooks.com"
+											}
+										],
+										"body": {},
+										"url": {
+											"raw": "http://localhost:3000/admin/v1/users?search[name]=Lui&page=1&length=3&order[name]=desc",
+											"protocol": "http",
+											"host": [
+												"localhost"
+											],
+											"port": "3000",
+											"path": [
+												"admin",
+												"v1",
+												"users"
+											],
+											"query": [
+												{
+													"key": "search[name]",
+													"value": "Lui",
+													"equals": true
+												},
+												{
+													"key": "page",
+													"value": "1",
+													"equals": true
+												},
+												{
+													"key": "length",
+													"value": "3",
+													"equals": true
+												},
+												{
+													"key": "order[name]",
+													"value": "desc",
+													"equals": true
+												}
+											]
+										},
+										"description": "Parâmetors opcionais:\n\n- searc[name] = \"Some exp\"\nEle deve conter uma expressão de busca por nome.\n\n- order[<field>] = <asc | desc>\nOrdenação conforme campo informado em <field>. Para o campo informado, deve ser informado 'asc' para ordenação crescente e 'desc' para decrescente\n\n- page = <page number>\nParâmetro de paginação para enviar o número da página que deseja acessar. Caso seja enviado um número menor que 1, será considerado página 1\n\n- length = <records count>\nQuantidade de registros cada página. Caso ele não seja informado, seŕa consideranda a quantidade padrão, que são 10 registros"
+									},
+									"response": []
+								},
+								{
+									"name": "/users",
+									"request": {
+										"method": "POST",
+										"header": [
+											{
+												"key": "access-token",
+												"value": "HkjtHVKR9OVRGD0qQEjLjw"
+											},
+											{
+												"key": "client",
+												"value": "jVhxFHMqHNEFYCOW7JFe9g"
+											},
+											{
+												"key": "expiry",
+												"value": "1603844286"
+											},
+											{
+												"key": "token-type",
+												"value": "Bearer"
+											},
+											{
+												"key": "uid",
+												"value": "test@test.com"
+											},
+											{
+												"key": "Content-Type",
+												"value": "application/json"
+											}
+										],
+										"body": {
+											"mode": "raw",
+											"raw": "{\n\t\"user\": {\n\t\t\"name\": \"User 02\",\n\t\t\"email\": \"test2@test.com\",\n\t\t\"profile\": \"client\",\n\t\t\"password\": \"123456\"\n\t}\n}"
+										},
+										"url": {
+											"raw": "http://localhost:3000/admin/v1/users",
+											"protocol": "http",
+											"host": [
+												"localhost"
+											],
+											"port": "3000",
+											"path": [
+												"admin",
+												"v1",
+												"users"
+											]
+										},
+										"description": ""
+									},
+									"response": []
+								},
+								{
+									"name": "/users/:id",
+									"request": {
+										"method": "PATCH",
+										"header": [
+											{
+												"key": "access-token",
+												"value": "FUHOVsmcajbU8X2SR71tAw"
+											},
+											{
+												"key": "client",
+												"value": "dYtREngsuO1kXdcAkdmWkg"
+											},
+											{
+												"key": "expiry",
+												"value": "1603579789"
+											},
+											{
+												"key": "token-type",
+												"value": "Bearer"
+											},
+											{
+												"key": "uid",
+												"value": "test@test.com"
+											},
+											{
+												"key": "Content-Type",
+												"value": "application/json"
+											}
+										],
+										"body": {
+											"mode": "raw",
+											"raw": "{\n\t\"user\": {\n\t\t\"name\": \"User renamed\"\n\t}\n}"
+										},
+										"url": {
+											"raw": "http://localhost:3000/admin/v1/users/2",
+											"protocol": "http",
+											"host": [
+												"localhost"
+											],
+											"port": "3000",
+											"path": [
+												"admin",
+												"v1",
+												"users",
+												"2"
+											]
+										},
+										"description": ""
+									},
+									"response": []
+								},
+								{
+									"name": "/users/:id",
+									"request": {
+										"method": "DELETE",
+										"header": [
+											{
+												"key": "access-token",
+												"value": "ZKqFrHQFGDx6PIusSFhKYw"
+											},
+											{
+												"key": "client",
+												"value": "LATHRBZA6wNtSDlDg5fAvQ"
+											},
+											{
+												"key": "expiry",
+												"value": "1603844402"
+											},
+											{
+												"key": "token-type",
+												"value": "Bearer"
+											},
+											{
+												"key": "uid",
+												"value": "test@test.com"
+											}
+										],
+										"body": {},
+										"url": {
+											"raw": "http://localhost:3000/admin/v1/users/2",
+											"protocol": "http",
+											"host": [
+												"localhost"
+											],
+											"port": "3000",
+											"path": [
+												"admin",
+												"v1",
+												"users",
+												"2"
+											]
+										},
+										"description": ""
+									},
+									"response": []
+								}
+							],
+							"_postman_isSubFolder": true
+						}
+					],
+					"_postman_isSubFolder": true
+				}
+			]
+		},
+		{
+			"name": "Auth",
+			"description": "",
+			"item": [
+				{
+					"name": "V1",
+					"description": "",
+					"item": [
+						{
+							"name": "/user",
+							"request": {
+								"method": "POST",
+								"header": [
+									{
+										"key": "Content-Type",
+										"value": "application/json"
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": "{\n\t\"name\": \"Test User 2\",\n\t\"email\": \"test2@test.com\",\n\t\"password\": \"123456\",\n\t\"password_confirmation\": \"123456\"\n}"
+								},
+								"url": {
+									"raw": "localhost:3000/auth/v1/user",
+									"host": [
+										"localhost"
+									],
+									"port": "3000",
+									"path": [
+										"auth",
+										"v1",
+										"user"
+									]
+								},
+								"description": ""
+							},
+							"response": []
+						},
+						{
+							"name": "/user/sign_in",
+							"request": {
+								"method": "POST",
+								"header": [
+									{
+										"key": "Content-Type",
+										"value": "application/json"
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": "{\n\t\"email\": \"lauri@braun-labadie.org\",\n\t\"password\": \"123456\"\n}"
+								},
+								"url": {
+									"raw": "localhost:3000/auth/v1/user/sign_in",
+									"host": [
+										"localhost"
+									],
+									"port": "3000",
+									"path": [
+										"auth",
+										"v1",
+										"user",
+										"sign_in"
+									]
+								},
+								"description": ""
+							},
+							"response": []
+						},
+						{
+							"name": "/user/sign_out",
+							"request": {
+								"method": "DELETE",
+								"header": [
+									{
+										"key": "Content-Type",
+										"value": "application/json; charset=utf-8"
+									},
+									{
+										"key": "access-token",
+										"value": "CfPgOkjOHFZy02kKEwErZg"
+									},
+									{
+										"key": "client",
+										"value": "LATHRBZA6wNtSDlDg5fAvQ"
+									},
+									{
+										"key": "expiry",
+										"value": "1603844688"
+									},
+									{
+										"key": "token-type",
+										"value": "Bearer"
+									},
+									{
+										"key": "uid",
+										"value": "test@test.com"
+									}
+								],
+								"body": {},
+								"url": {
+									"raw": "localhost:3000/auth/v1/user/sign_out",
+									"host": [
+										"localhost"
+									],
+									"port": "3000",
+									"path": [
+										"auth",
+										"v1",
+										"user",
+										"sign_out"
+									]
+								},
+								"description": ""
+							},
+							"response": []
+						},
+						{
+							"name": "/user/password",
+							"request": {
+								"method": "POST",
+								"header": [
+									{
+										"key": "Content-Type",
+										"value": "application/json"
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": "{\n\t\"email\": \"test@test.com\",\n\t\"redirect_url\": \"localhost:3001/change_it\"\n}"
+								},
+								"url": {
+									"raw": "localhost:3000/auth/v1/user/password",
+									"host": [
+										"localhost"
+									],
+									"port": "3000",
+									"path": [
+										"auth",
+										"v1",
+										"user",
+										"password"
+									]
+								},
+								"description": ""
+							},
+							"response": []
+						},
+						{
+							"name": "user/password",
+							"request": {
+								"method": "PATCH",
+								"header": [
+									{
+										"key": "Content-Type",
+										"value": "application/json"
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": "{\n\t\"reset_password_token\": \"rugBPEPy4e2iLs3kt3Jx\",\n\t\"password\": \"444444\",\n\t\"password_confirmation\": \"444444\"\n}"
+								},
+								"url": {
+									"raw": "localhost:3000/auth/v1/user/password",
+									"host": [
+										"localhost"
+									],
+									"port": "3000",
+									"path": [
+										"auth",
+										"v1",
+										"user",
+										"password"
+									]
+								},
+								"description": ""
+							},
+							"response": []
+						}
+					],
+					"_postman_isSubFolder": true
+				}
+			]
+		},
+		{
+			"name": "Storefront",
+			"description": "",
+			"item": [
+				{
+					"name": "V1",
+					"description": "",
+					"item": [
+						{
+							"name": "Home",
+							"description": "",
+							"item": [
+								{
+									"name": "/home",
+									"request": {
+										"method": "GET",
+										"header": [],
+										"body": {},
+										"url": {
+											"raw": "http://localhost:3000/storefront/v1/home",
+											"protocol": "http",
+											"host": [
+												"localhost"
+											],
+											"port": "3000",
+											"path": [
+												"storefront",
+												"v1",
+												"home"
+											]
+										},
+										"description": ""
+									},
+									"response": []
+								}
+							],
+							"_postman_isSubFolder": true
+						},
+						{
+							"name": "Categories",
+							"description": "",
+							"item": [
+								{
+									"name": "/categories",
+									"request": {
+										"method": "GET",
+										"header": [],
+										"body": {},
+										"url": {
+											"raw": "http://localhost:3000/storefront/v1/categories",
+											"protocol": "http",
+											"host": [
+												"localhost"
+											],
+											"port": "3000",
+											"path": [
+												"storefront",
+												"v1",
+												"categories"
+											]
+										},
+										"description": ""
+									},
+									"response": []
+								}
+							],
+							"_postman_isSubFolder": true
+						},
+						{
+							"name": "Checkouts",
+							"description": "",
+							"item": [
+								{
+									"name": "/checkouts [CARTÃO DE CREDITO]",
+									"request": {
+										"method": "POST",
+										"header": [
+											{
+												"key": "Content-Type",
+												"value": "application/json"
+											},
+											{
+												"key": "access-token",
+												"value": "UFj7PectVQLmxqljNwo86Q"
+											},
+											{
+												"key": "client",
+												"value": "OsdKWdP5dn9W33AIB4FalQ"
+											},
+											{
+												"key": "expiry",
+												"value": "1621261423"
+											},
+											{
+												"key": "token-type",
+												"value": "Bearer"
+											},
+											{
+												"key": "uid",
+												"value": "cameron.abernathy@greenholt.biz"
+											}
+										],
+										"body": {
+											"mode": "raw",
+											"raw": "{\n\t\"checkout\": {\n\t\t\"payment_type\": \"credit_card\", \n\t\t\"installments\": 2,\n\t\t\"coupon_id\": 12,\n        \"items\": [\n          { \n          \t\"quantity\": 2,\n          \t\"product_id\": 1\n          },\n          { \n          \t\"quantity\": 3, \n          \t\"product_id\": 30\n          }\n        ],\n        \"address\": {\n        \t\"street\": \"Alguma rua\",\n        \t\"number\": 1234,\n        \t\"city\": \"Colatina\",\n        \t\"state\": \"ES\",\n        \t\"post_code\": \"29702040\"\n        },\n        \"card_hash\": \"7779944f-a787-4f4f-880e-540932e5d221\",\n        \"document\": \"12522126741\"\n\t}\n}"
+										},
+										"url": {
+											"raw": "http://localhost:3000/storefront/v1/checkouts",
+											"protocol": "http",
+											"host": [
+												"localhost"
+											],
+											"port": "3000",
+											"path": [
+												"storefront",
+												"v1",
+												"checkouts"
+											]
+										},
+										"description": ""
+									},
+									"response": []
+								},
+								{
+									"name": "/checkouts [BOLETO]",
+									"request": {
+										"method": "POST",
+										"header": [
+											{
+												"key": "Content-Type",
+												"value": "application/json"
+											},
+											{
+												"key": "access-token",
+												"value": "BFrHR-6AxDO-kuRqtu2CpQ"
+											},
+											{
+												"key": "client",
+												"value": "jU3RQLtCmtKTq2Wr5dn1XA"
+											},
+											{
+												"key": "expiry",
+												"value": "1621599493"
+											},
+											{
+												"key": "token-type",
+												"value": "Bearer"
+											},
+											{
+												"key": "uid",
+												"value": "irving.feest@wolff.biz"
+											}
+										],
+										"body": {
+											"mode": "raw",
+											"raw": "{\n\t\"checkout\": { \n\t\t\"payment_type\": \"billet\", \n\t\t\"installments\": 1,\n\t\t\"coupon_id\": 12,\n        \"items\": [\n          { \n          \t\"quantity\": 2,\n          \t\"product_id\": 1\n          },\n          { \n          \t\"quantity\": 3,\n          \t\"product_id\": 30\n          }\n        ],\n        \"document\": \"12522126741\"\n\t}\n}"
+										},
+										"url": {
+											"raw": "http://localhost:3000/storefront/v1/checkouts",
+											"protocol": "http",
+											"host": [
+												"localhost"
+											],
+											"port": "3000",
+											"path": [
+												"storefront",
+												"v1",
+												"checkouts"
+											]
+										},
+										"description": ""
+									},
+									"response": []
+								}
+							],
+							"_postman_isSubFolder": true
+						},
+						{
+							"name": "Coupon Validations",
+							"description": "",
+							"item": [
+								{
+									"name": "/coupons/:coupon_code/validations",
+									"request": {
+										"method": "POST",
+										"header": [
+											{
+												"key": "access-token",
+												"value": "VY1Qkl3urh5wqHvaF3eQKA"
+											},
+											{
+												"key": "client",
+												"value": "1hhEAB38cynxEurPuIZgJw"
+											},
+											{
+												"key": "expiry",
+												"value": "1614829329"
+											},
+											{
+												"key": "token-type",
+												"value": "Bearer"
+											},
+											{
+												"key": "uid",
+												"value": "lauri@braun-labadie.org"
+											}
+										],
+										"body": {},
+										"url": {
+											"raw": "localhost:3000/storefront/v1/coupons/SweetPromo/validations",
+											"host": [
+												"localhost"
+											],
+											"port": "3000",
+											"path": [
+												"storefront",
+												"v1",
+												"coupons",
+												"SweetPromo",
+												"validations"
+											]
+										},
+										"description": ""
+									},
+									"response": []
+								}
+							],
+							"_postman_isSubFolder": true
+						},
+						{
+							"name": "Games",
+							"description": "",
+							"item": [
+								{
+									"name": "GET /games",
+									"request": {
+										"method": "GET",
+										"header": [
+											{
+												"key": "access-token",
+												"value": "EG5AgolkAu8o21meuKlebQ"
+											},
+											{
+												"key": "client",
+												"value": "TTJ7fn_DfHYgiQ1aQup-Zg"
+											},
+											{
+												"key": "expiry",
+												"value": "1622835912"
+											},
+											{
+												"key": "token-type",
+												"value": "Bearer"
+											},
+											{
+												"key": "uid",
+												"value": "irving.feest@wolff.biz"
+											}
+										],
+										"body": {},
+										"url": {
+											"raw": "http://localhost:3000/storefront/v1/games",
+											"protocol": "http",
+											"host": [
+												"localhost"
+											],
+											"port": "3000",
+											"path": [
+												"storefront",
+												"v1",
+												"games"
+											]
+										},
+										"description": "Enpoint to search products"
+									},
+									"response": []
+								}
+							],
+							"_postman_isSubFolder": true
+						},
+						{
+							"name": "Orders",
+							"description": "",
+							"item": [
+								{
+									"name": "/orders",
+									"request": {
+										"method": "GET",
+										"header": [
+											{
+												"key": "Content-Type",
+												"value": "application/json"
+											},
+											{
+												"key": "access-token",
+												"value": "xu0ey8f8VHRUjSGILBu8qA"
+											},
+											{
+												"key": "client",
+												"value": "TTJ7fn_DfHYgiQ1aQup-Zg"
+											},
+											{
+												"key": "expiry",
+												"value": "1622835912"
+											},
+											{
+												"key": "token-type",
+												"value": "Bearer"
+											},
+											{
+												"key": "uid",
+												"value": "irving.feest@wolff.biz"
+											}
+										],
+										"body": {},
+										"url": {
+											"raw": "http://localhost:3000/storefront/v1/orders",
+											"protocol": "http",
+											"host": [
+												"localhost"
+											],
+											"port": "3000",
+											"path": [
+												"storefront",
+												"v1",
+												"orders"
+											]
+										},
+										"description": ""
+									},
+									"response": []
+								},
+								{
+									"name": "/orders/:id",
+									"request": {
+										"method": "GET",
+										"header": [
+											{
+												"key": "Content-Type",
+												"value": "application/json"
+											},
+											{
+												"key": "access-token",
+												"value": "EG5AgolkAu8o21meuKlebQ"
+											},
+											{
+												"key": "client",
+												"value": "TTJ7fn_DfHYgiQ1aQup-Zg"
+											},
+											{
+												"key": "expiry",
+												"value": "1622835912"
+											},
+											{
+												"key": "token-type",
+												"value": "Bearer"
+											},
+											{
+												"key": "uid",
+												"value": "irving.feest@wolff.biz"
+											}
+										],
+										"body": {},
+										"url": {
+											"raw": "http://localhost:3000/storefront/v1/orders/24",
+											"protocol": "http",
+											"host": [
+												"localhost"
+											],
+											"port": "3000",
+											"path": [
+												"storefront",
+												"v1",
+												"orders",
+												"24"
+											]
+										},
+										"description": ""
+									},
+									"response": []
+								}
+							],
+							"_postman_isSubFolder": true
+						},
+						{
+							"name": "Products",
+							"description": "",
+							"item": [
+								{
+									"name": "GET /products",
+									"request": {
+										"method": "GET",
+										"header": [],
+										"body": {},
+										"url": {
+											"raw": "http://localhost:3000/storefront/v1/products?search=Po&category_ids[]=11&price[min]=160&price[max]=386.28&release_date[min]=07-01-2021&release_date[max]=09-01-2021&order[price]=asc",
+											"protocol": "http",
+											"host": [
+												"localhost"
+											],
+											"port": "3000",
+											"path": [
+												"storefront",
+												"v1",
+												"products"
+											],
+											"query": [
+												{
+													"key": "search",
+													"value": "Po",
+													"equals": true
+												},
+												{
+													"key": "category_ids[]",
+													"value": "11",
+													"equals": true
+												},
+												{
+													"key": "price[min]",
+													"value": "160",
+													"equals": true
+												},
+												{
+													"key": "price[max]",
+													"value": "386.28",
+													"equals": true
+												},
+												{
+													"key": "release_date[min]",
+													"value": "07-01-2021",
+													"equals": true
+												},
+												{
+													"key": "release_date[max]",
+													"value": "09-01-2021",
+													"equals": true
+												},
+												{
+													"key": "order[price]",
+													"value": "asc",
+													"equals": true
+												}
+											]
+										},
+										"description": "Enpoint to search products"
+									},
+									"response": []
+								},
+								{
+									"name": "GET /products/:id",
+									"request": {
+										"method": "GET",
+										"header": [],
+										"body": {},
+										"url": {
+											"raw": "http://localhost:3000/storefront/v1/products/27",
+											"protocol": "http",
+											"host": [
+												"localhost"
+											],
+											"port": "3000",
+											"path": [
+												"storefront",
+												"v1",
+												"products",
+												"27"
+											]
+										},
+										"description": ""
+									},
+									"response": []
+								}
+							],
+							"_postman_isSubFolder": true
+						},
+						{
+							"name": "Wish Items",
+							"description": "",
+							"item": [
+								{
+									"name": "/with_items",
+									"request": {
+										"method": "GET",
+										"header": [
+											{
+												"key": "access-token",
+												"value": "8wRoX0tguNxtZiWd4nXLnA"
+											},
+											{
+												"key": "client",
+												"value": "1hhEAB38cynxEurPuIZgJw"
+											},
+											{
+												"key": "expiry",
+												"value": "1614829329"
+											},
+											{
+												"key": "token-type",
+												"value": "Bearer"
+											},
+											{
+												"key": "uid",
+												"value": "lauri@braun-labadie.org"
+											}
+										],
+										"body": {},
+										"url": {
+											"raw": "http://localhost:3000/storefront/v1/wish_items",
+											"protocol": "http",
+											"host": [
+												"localhost"
+											],
+											"port": "3000",
+											"path": [
+												"storefront",
+												"v1",
+												"wish_items"
+											]
+										},
+										"description": ""
+									},
+									"response": []
+								},
+								{
+									"name": "/with_items",
+									"request": {
+										"method": "POST",
+										"header": [
+											{
+												"key": "access-token",
+												"value": "4VW8txlJElmQpNrlG9ALiA"
+											},
+											{
+												"key": "client",
+												"value": "1hhEAB38cynxEurPuIZgJw"
+											},
+											{
+												"key": "expiry",
+												"value": "1614829329"
+											},
+											{
+												"key": "token-type",
+												"value": "Bearer"
+											},
+											{
+												"key": "uid",
+												"value": "lauri@braun-labadie.org"
+											},
+											{
+												"key": "Content-Type",
+												"value": "application/json"
+											}
+										],
+										"body": {
+											"mode": "raw",
+											"raw": "{\n\t\"wish_item\": {\n\t\t\"product_id\": 19\n\t}\n}"
+										},
+										"url": {
+											"raw": "http://localhost:3000/storefront/v1/wish_items",
+											"protocol": "http",
+											"host": [
+												"localhost"
+											],
+											"port": "3000",
+											"path": [
+												"storefront",
+												"v1",
+												"wish_items"
+											]
+										},
+										"description": ""
+									},
+									"response": []
+								},
+								{
+									"name": "/with_items/:id",
+									"request": {
+										"method": "DELETE",
+										"header": [
+											{
+												"key": "access-token",
+												"value": "9DuUCAMXsyR2MZLhXpqGWg"
+											},
+											{
+												"key": "client",
+												"value": "1hhEAB38cynxEurPuIZgJw"
+											},
+											{
+												"key": "expiry",
+												"value": "1614829329"
+											},
+											{
+												"key": "token-type",
+												"value": "Bearer"
+											},
+											{
+												"key": "uid",
+												"value": "lauri@braun-labadie.org"
+											}
+										],
+										"body": {},
+										"url": {
+											"raw": "http://localhost:3000/storefront/v1/wish_items/46",
+											"protocol": "http",
+											"host": [
+												"localhost"
+											],
+											"port": "3000",
+											"path": [
+												"storefront",
+												"v1",
+												"wish_items",
+												"46"
+											]
+										},
+										"description": ""
+									},
+									"response": []
+								}
+							],
+							"event": [
+								{
+									"listen": "prerequest",
+									"script": {
+										"id": "ab0105ae-aa91-494b-ae80-ec77c2faf40e",
+										"type": "text/javascript",
+										"exec": [
+											""
+										]
+									}
+								},
+								{
+									"listen": "test",
+									"script": {
+										"id": "d70fb61a-a0e4-46f9-9f61-0ca2e536cc44",
+										"type": "text/javascript",
+										"exec": [
+											""
+										]
+									}
+								}
+							],
+							"_postman_isSubFolder": true
+						}
+					],
+					"_postman_isSubFolder": true
+				}
+			]
+		},
+		{
+			"name": "Juno",
+			"description": "",
+			"item": [
+				{
+					"name": "/authorization-server",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/x-www-form-urlencoded"
+							},
+							{
+								"key": "Authorization",
+								"value": "Basic SU9NdHp2NHdjQXdvNlFNdzo4LkU/SGE6KF4/dnRTZUVjKFZfKnwofWxaKlN2cmpxYg=="
+							}
+						],
+						"body": {
+							"mode": "urlencoded",
+							"urlencoded": [
+								{
+									"key": "grant_type",
+									"value": "client_credentials",
+									"description": "",
+									"type": "text"
+								}
+							]
+						},
+						"url": {
+							"raw": "https://sandbox.boletobancario.com/authorization-server/oauth/token",
+							"protocol": "https",
+							"host": [
+								"sandbox",
+								"boletobancario",
+								"com"
+							],
+							"path": [
+								"authorization-server",
+								"oauth",
+								"token"
+							]
+						},
+						"description": ""
+					},
+					"response": []
+				},
+				{
+					"name": "/charges",
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "X-Resource-Token",
+								"value": "C694AF9175F46B40F3299AA6388BA2E90A02A3813303CCC8A67893ED111C18FE"
+							},
+							{
+								"key": "X-Api-Version",
+								"value": "2"
+							},
+							{
+								"key": "Authorization",
+								"value": "Bearer eyJhbGciOiJSUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VyX25hbWUiOiJkZm1vcmV0b0BnbWFpbC5jb20iLCJzY29wZSI6WyJhbGwiXSwiZXhwIjoxNjA0OTUwNjE2LCJqdGkiOiJiOWE1Y2NjZS1jZTY2LTQ5MzctYjE2Yi1hNTdjNjdhNTI4NWEiLCJjbGllbnRfaWQiOiJJT010enY0d2NBd282UU13In0.T2G8ai_X8KWtp1Gkhq7jDiorGn5L-5mAAH6Y0nKBMVPFPYc-fOgzYPQKXsfoubdhCzj8QnIKocTlHR3TY4iN8-fWDwKGONPiHUgVGb9XlWGSIEHYCIgQAsXDk6qIdxEn8Irh221ozClnOxZ8v3reEFMpYmSUoy9tptAhpmxc3ZbhZfJq_rJyGmxOlvSY-Sb5RjrsMdJKBJ0BkS_J5ouBiJGGxRmr7K7XOEH0Y55puw8KO0Kr1yz2wxlPPgEEU3ZOGobROblycfZPzV7Pf2YuEZNRPiO3vAs5gEdxRZBoGYHH2XB2F6XdBd_1jhScYpW6_dwruQIslysH9_FSrNw9Gw"
+							}
+						],
+						"body": {},
+						"url": {
+							"raw": "https://sandbox.boletobancario.com/api-integration/charges",
+							"protocol": "https",
+							"host": [
+								"sandbox",
+								"boletobancario",
+								"com"
+							],
+							"path": [
+								"api-integration",
+								"charges"
+							]
+						},
+						"description": ""
+					},
+					"response": []
+				},
+				{
+					"name": "/charges [BOLETO]",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "X-Resource-Token",
+								"value": "C694AF9175F46B40F3299AA6388BA2E90A02A3813303CCC8A67893ED111C18FE"
+							},
+							{
+								"key": "X-Api-Version",
+								"value": "2"
+							},
+							{
+								"key": "Authorization",
+								"value": "Bearer eyJhbGciOiJSUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VyX25hbWUiOiJkZm1vcmV0b0BnbWFpbC5jb20iLCJzY29wZSI6WyJhbGwiXSwiZXhwIjoxNjE0OTAyNzgyLCJqdGkiOiI0NldrR3pvdW1INUZfZUxKS1J1RVM5a3VsZG8iLCJjbGllbnRfaWQiOiJJT010enY0d2NBd282UU13In0.a37HuNZ84bov-CXWqHjFeCyxZ1C5kojkdGjR99nvq5RCeFnHZPam-GNr4qnnx8_aSKbwl4DhqUW0I9IQhFyg-F0rk4o53BzU7VQ6Xbu7OOPz9SuQ2RpYTO3wQAjVDPUBsYO43ewMH9yhAd6RTH3ZYna_Mo1CQG7PFqUhFU8Mf99Np5MtGUL27kVzKo7fWkZvRPa47RTOL7I4OZMAtEIdpOCs3bRIc1zTybs8TCrLqYHJa9d3V-XdQSEWCJ4BojmOtZsEh6Z2p4SZaeHJZqxywOfiDW7yUPeSB7WSpc8dzLw2T6srwi-K6e84gF7eEdqkKS1S-XOVTgcI3zckgIg31Q"
+							},
+							{
+								"key": "Content-Type",
+								"value": "application/json"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n\t\"charge\": {\n\t\t\"description\": \"Testing future Juno enpoint\",\n\t\t\"amount\": 22.57,\n\t\t\"dueDate\": \"2021-03-04\",\n\t\t\"installments\": 4,\n\t\t\"discountAmount\": 2.43,\n\t\t\"paymentTypes\": [\"BOLETO\"]\n\t},\n\t\"billing\": {\n\t\t\"name\": \"Daniel Vitor\",\n\t\t\"document\": \"12522126741\",\n\t\t\"email\": \"dfmoreto@gmail.com\"\n\t}\n}"
+						},
+						"url": {
+							"raw": "https://sandbox.boletobancario.com/api-integration/charges",
+							"protocol": "https",
+							"host": [
+								"sandbox",
+								"boletobancario",
+								"com"
+							],
+							"path": [
+								"api-integration",
+								"charges"
+							]
+						},
+						"description": ""
+					},
+					"response": []
+				},
+				{
+					"name": "/charges [CARTAO DE CREDITO]",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "X-Resource-Token",
+								"value": "C694AF9175F46B40F3299AA6388BA2E90A02A3813303CCC8A67893ED111C18FE"
+							},
+							{
+								"key": "X-Api-Version",
+								"value": "2"
+							},
+							{
+								"key": "Authorization",
+								"value": "Bearer eyJhbGciOiJSUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VyX25hbWUiOiJkZm1vcmV0b0BnbWFpbC5jb20iLCJzY29wZSI6WyJhbGwiXSwiZXhwIjoxNjE1NDY0MDI1LCJqdGkiOiJTd015cS03VjFtNDhoN3NqX0xyQlhVZENPcm8iLCJjbGllbnRfaWQiOiJJT010enY0d2NBd282UU13In0.HVmu2iXmRpEApYiu3-V8oFPiZ_MRXzMp_xXURrLE1TS13BtNH6QtOmLZ15ZYaEZqBNqTaYB7bxUMK9ytWhsnqDuS369bdhVDgch4hLvWBjhfgq-2o9SY0tp5qS5LcuapzkHR-pIgLe2VbCQiMoZ32L0Wej8_Vm71sPrz_qyvkY0gd_fgojSuSxjzVCnJBROv_H12yhfDD0tMWqDqhJ-8f8l-y8venCkmwWqpZQjZPhxr-ICK7l8_onE9Gszdm6rms-R5aTgVp3hUikpMAd69OlNdYGgFZag2gTekbO0VnqQ9fKk1ZzYDedrUA67sLs0hTDRVda9R2SaKuXYJ8KUgsQ"
+							},
+							{
+								"key": "Content-Type",
+								"value": "application/json"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n\t\"charge\": {\n\t\t\"description\": \"Testing future Juno enpoint\",\n\t\t\"amount\": 24.57,\n\t\t\"installments\": 4,\n\t\t\"dueDate\": \"2021-03-12\",\n\t\t\"discountAmount\": 2.43,\n\t\t\"paymentTypes\": [\"CREDIT_CARD\"]\n\t},\n\t\"billing\": {\n\t\t\"name\": \"Daniel Vitor\",\n\t\t\"document\": \"12522126741\",\n\t\t\"email\": \"dfmoreto@gmail.com\"\n\t}\n}"
+						},
+						"url": {
+							"raw": "https://sandbox.boletobancario.com/api-integration/charges",
+							"protocol": "https",
+							"host": [
+								"sandbox",
+								"boletobancario",
+								"com"
+							],
+							"path": [
+								"api-integration",
+								"charges"
+							]
+						},
+						"description": ""
+					},
+					"response": []
+				},
+				{
+					"name": "/payments",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "X-Resource-Token",
+								"value": "C694AF9175F46B40F3299AA6388BA2E90A02A3813303CCC8A67893ED111C18FE"
+							},
+							{
+								"key": "X-Api-Version",
+								"value": "2"
+							},
+							{
+								"key": "Authorization",
+								"value": "Bearer eyJhbGciOiJSUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VyX25hbWUiOiJkZm1vcmV0b0BnbWFpbC5jb20iLCJzY29wZSI6WyJhbGwiXSwiZXhwIjoxNjE1NDY0MDI1LCJqdGkiOiJTd015cS03VjFtNDhoN3NqX0xyQlhVZENPcm8iLCJjbGllbnRfaWQiOiJJT010enY0d2NBd282UU13In0.HVmu2iXmRpEApYiu3-V8oFPiZ_MRXzMp_xXURrLE1TS13BtNH6QtOmLZ15ZYaEZqBNqTaYB7bxUMK9ytWhsnqDuS369bdhVDgch4hLvWBjhfgq-2o9SY0tp5qS5LcuapzkHR-pIgLe2VbCQiMoZ32L0Wej8_Vm71sPrz_qyvkY0gd_fgojSuSxjzVCnJBROv_H12yhfDD0tMWqDqhJ-8f8l-y8venCkmwWqpZQjZPhxr-ICK7l8_onE9Gszdm6rms-R5aTgVp3hUikpMAd69OlNdYGgFZag2gTekbO0VnqQ9fKk1ZzYDedrUA67sLs0hTDRVda9R2SaKuXYJ8KUgsQ"
+							},
+							{
+								"key": "Content-Type",
+								"value": "application/json"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n\t\"chargeId\": \"chr_EB385DA713D39733A968B641B66FE0C2\",\n\t\"creditCardDetails\": {\n\t    \"creditCardHash\": \"18023072-6534-4b96-b3ea-1f2b3aed5ecf\"\n\t},\n\t\"billing\": {\n\t\t\"address\": {\n\t\t\t\"street\": \"My street\",\n\t\t\t\"number\": \"ABCD\",\n\t\t\t\"state\": \"ES\",\n\t\t\t\"city\": \"Colatina\",\n\t\t\t\"postCode\": \"29702140\"\n\t\t}\n\t}\n}"
+						},
+						"url": {
+							"raw": "https://sandbox.boletobancario.com/api-integration/payments",
+							"protocol": "https",
+							"host": [
+								"sandbox",
+								"boletobancario",
+								"com"
+							],
+							"path": [
+								"api-integration",
+								"payments"
+							]
+						},
+						"description": ""
+					},
+					"response": []
+				}
+			]
+		}
+	]
+}
